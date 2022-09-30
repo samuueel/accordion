@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #212121;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordionItem {
+    max-width: 500px;
+}
+
+.accordionItemHeading {
+    cursor: pointer;
+    margin: 0px 0px 5px 0px;
+    padding: 10px;
+    background: #2980b9;
+    color: #fff;
+    width: 100%;
+}
+
+.close .accordionItemContent {
+    height: 0px;
+    transition: height 1s ease-out;
+    transform: scaleY(0);
+}
+
+.open .accordionItemContent {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+    display: block;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.4s ease;
+}
+
+.open .accordionItemHeading {
+    margin: 0px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: #bdc3c7;
+    color: #323232;
+}
